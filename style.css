@@ -64,6 +64,7 @@
     .active div:nth-child(3) {
         transform: rotate(-55deg);
         background-color: black !important;
+        bottom: 2px;
         z-index: 99;
     }
     
