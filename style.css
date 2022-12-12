@@ -1,0 +1,279 @@
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Prata&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        color: #fff;
+    }
+    
+    #container {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+    }
+    
+    .item {
+        background-color: rgb(15, 15, 15);
+    }
+    
+    .header,
+    .footer {
+        padding: 30px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header {
+        position: sticky;
+        top: 0;
+    }
+    
+    .header #hamburger {
+        display: flex;
+        width: 40px;
+        flex-flow: column nowrap;
+        gap: 8px;
+    }
+    
+    .header #hamburger div {
+        width: 25px;
+        height: 0.1rem;
+        border-radius: 10px;
+        transform-origin: 1px;
+        transition: all 0.3s linear;
+        background-color: white;
+        border: 1px solid white;
+        position: relative;
+    }
+    
+    .active div:nth-child(1) {
+        transform: rotate(55deg);
+        background-color: black !important;
+        z-index: 99;
+    }
+    
+    .active div:nth-child(2) {
+        transform: translateX(100%);
+        opacity: 0;
+        background-color: black !important;
+        z-index: 99;
+    }
+    
+    .active div:nth-child(3) {
+        transform: rotate(-55deg);
+        background-color: black !important;
+        z-index: 99;
+    }
+    
+    #nav-menu {
+        transform-origin: 1px;
+        transition: all 3s ease-out;
+    }
+    
+    #nav-menu ul {
+        background-color: rgb(240, 240, 240);
+        transform-origin: 1px;
+        top: 0;
+        right: 0;
+    }
+    
+    .header #nav-menu ul {
+        list-style: none;
+        display: none;
+        width: 150px;
+        height: 100vh;
+    }
+    
+    .active ul {
+        position: absolute;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: start;
+        padding-top: 70px;
+    }
+    
+    .active li {
+        padding: 20px 10px;
+        font-size: 16px;
+        font-family: Inter, sans-serif;
+        text-decoration: none;
+    }
+    
+    .active li:hover,
+    .active li:focus,
+    .active a li:hover,
+    .active a li:focus {
+        background-color: black;
+        color: white !important;
+        padding: 20px 10px;
+    }
+    
+    .active a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .active a li:hover,
+    .active a li:focus {
+        color: white !important;
+    }
+    
+    #menu-button {
+        display: none;
+    }
+    
+    .main_item {
+        padding: 10px;
+        display: grid;
+        margin: 50px 0;
+    }
+    
+    .title {
+        font-size: 20px;
+        font-family: Prata, sans-serif;
+        padding: 5px 0;
+    }
+    
+    .desc {
+        font-size: 16px;
+        line-height: 24px;
+        font-family: Inter, sans-serif;
+        padding: 5px 0;
+        color: rgb(194, 194, 194);
+    }
+    
+    #clients {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 20px;
+        padding: 15px 20px;
+    }
+    
+    #clients svg {
+        display: block;
+        margin: 0 auto;
+        width: 95%;
+    }
+    
+    #projects {
+        row-gap: 40px;
+    }
+    
+    #projects .image img {
+        width: 100%;
+        height: 240px;
+        padding: 15px 0;
+        object-fit: cover;
+    }
+    
+    #projects .title {
+        display: flex;
+    }
+    
+    #projects #right-arrow {
+        position: relative;
+        bottom: 4px;
+    }
+    
+    #about {
+        background-color: rgb(90, 97, 109);
+        padding: 50px 10px;
+    }
+    
+    #about p {
+        padding: 10px 0;
+    }
+    
+    #get-touch {
+        background-color: rgb(255, 214, 87);
+        border: none;
+        padding: 10px 20px;
+        margin-top: 15px;
+        font-size: 16px;
+        font-family: Prata, sans-serif;
+    }
+    
+    .footer,
+    .footer .item {
+        background-color: rgb(90, 97, 109);
+    }
+    
+    .footer #social {
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+    }
+    
+    @media (min-width: 720px) {
+        #clients {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    @media (min-width: 1020px) {
+        .header,
+        .footer {
+            padding: 30px 50px;
+        }
+        .header #hamburger {
+            display: none;
+        }
+        .header #nav-menu ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            height: 30px;
+            width: 100%;
+            background-color: black;
+        }
+        ul {
+            display: flex !important;
+        }
+        li {
+            padding: 20px 10px;
+            font-size: 16px;
+            font-family: Inter, sans-serif;
+            text-decoration: none;
+            color: rgb(194, 194, 194);
+        }
+        li:hover,
+        li:focus,
+        a li:hover,
+        a li:focus {
+            background-color: white;
+            color: black !important;
+            padding: 10px 10px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        a li:hover,
+        a li:focus {
+            color: black !important;
+        }
+        #menu-button {
+            display: block;
+            margin-top: -10px;
+        }
+        #projects {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 60px;
+        }
+        .main_item {
+            padding: 10px 50px;
+        }
+        #about {
+            padding: 30px 50px;
+            display: flex;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 40px;
+        }
+        #clients {
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
