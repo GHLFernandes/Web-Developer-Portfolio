@@ -149,7 +149,7 @@
     }
     
     .main_item {
-        padding: 10px;
+        padding: 10px 30px;
         display: grid;
         margin: 50px 0;
     }
@@ -158,6 +158,10 @@
         font-size: 20px;
         font-family: Prata, sans-serif;
         padding: 5px 0;
+    }
+    
+    .title a {
+        color: white;
     }
     
     .desc {
@@ -203,7 +207,7 @@
     
     #about {
         background-color: rgb(90, 97, 109);
-        padding: 50px 10px;
+        padding: 50px 30px;
     }
     
     #about p {
