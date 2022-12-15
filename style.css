@@ -78,12 +78,9 @@
         transform-origin: 1px;
         top: 0;
         right: 0;
-    }
-    
-    .header #nav-menu ul {
         list-style: none;
         display: none;
-        width: 150px;
+        width: 50%;
         height: 100vh;
     }
     
@@ -263,6 +260,9 @@
             height: 30px;
             width: 100%;
             background-color: black;
+        }
+        #nav-menu .active {
+            display: none
         }
         ul {
             display: flex !important;
