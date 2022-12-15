@@ -102,10 +102,11 @@
         text-decoration: none;
     }
     
-    .active li:hover,
-    .active li:focus,
+    .active li a:hover,
+    .active li a:focus,
     .active a li:hover,
     .active a li:focus {
+        cursor: pointer;
         background-color: black;
         color: white !important;
         padding: 20px 10px;
@@ -119,6 +120,31 @@
     .active a li:hover,
     .active a li:focus {
         color: white !important;
+    }
+    
+    .active li:last-child {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    #get-touch-mobile {
+        background-color: rgb(255, 214, 87);
+        display: inline-block;
+        border: none;
+        padding: 10px 16px;
+        margin-top: 15px;
+        font-size: 16px;
+        font-family: Prata, sans-serif;
+    }
+    
+    #get-touch_mobile:hover,
+    #get-touch-mobile:focus {
+        cursor: pointer;
+    }
+    
+    .active li button:hover,
+    .active li button:focus {
+        background-color: transparent;
     }
     
     #menu-button {
@@ -208,6 +234,9 @@
     }
     
     @media (min-width: 720px) {
+        .header #nav-menu ul {
+            width: 300px;
+        }
         #clients {
             grid-template-columns: repeat(3, 1fr);
         }
@@ -220,6 +249,10 @@
         }
         .header #hamburger {
             display: none;
+        }
+        .header #nav-menu {
+            display: flex;
+            justify-content: space-between;
         }
         .header #nav-menu ul {
             list-style: none;
@@ -256,6 +289,9 @@
         a li:hover,
         a li:focus {
             color: black !important;
+        }
+        #get-touch-mobile {
+            display: none;
         }
         #menu-button {
             display: block;
